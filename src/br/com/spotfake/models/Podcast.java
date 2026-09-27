@@ -1,7 +1,9 @@
 package br.com.spotfake.models;
 
+//importa o "contrato"
 import br.com.spotfake.actuators.Classificavel;
 
+//Podcast descende de Audio e implementa o "contrato" de  Classificavel
 public class Podcast extends Audio implements Classificavel {
     private String descricao;
     private String apresentador;
@@ -22,11 +24,17 @@ public class Podcast extends Audio implements Classificavel {
         this.apresentador = apresentador;
     }
 
+    //Sobrescreve e estabelece a regra do 'contrato"
     @Override
     public double getClassificacao() {
+        //Se o total de curtidas for menor que 500
         if (this.getTotalCurtidas() > 500){
+            //A classificação (nota) será igual a 10
             return 10;
-        }else {
+        }
+        //Caso contrário
+        else {
+            //A classificação (nota) será igual a 8
             return 8;
         }
     }

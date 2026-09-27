@@ -16,7 +16,7 @@ public class Audio {
         return titulo;
     }
 
-    //Haverá um loop com alteração
+    //Só precisa visualizar
     public int getTotalReproducao() {
         return totalReproducao;
     }
@@ -25,11 +25,11 @@ public class Audio {
         return totalCurtidas;
     }
 
-    //Apenas mostra, pois virá de outra regra (Classificavel)
     public double getClassificacao() {
         return classificacao;
     }
 
+   //Método que será chamado no loop para simulação
     public void curte(){
         this.totalCurtidas++;
     }
